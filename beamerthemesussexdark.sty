@@ -1,0 +1,15 @@
+\DeclareOptionBeamer{shadow}[true]{\def\beamer@themerounded@shadow{#1}}
+\ExecuteOptionsBeamer{shadow=false}
+% footlogo=true|false: small Sussex logo at the right of the footline
+\DeclareOptionBeamer{footlogo}[true]{\def\beamer@sussex@footlogo{#1}}
+\ExecuteOptionsBeamer{footlogo=true}
+\ProcessOptionsBeamer
+
+\usetheme{default}
+
+\usecolortheme{sussexdark}
+\usefonttheme{sussexdark}
+\useinnertheme{sussexdark}
+\useoutertheme{sussexdark}
+
+\beamertemplatenavigationsymbolsempty

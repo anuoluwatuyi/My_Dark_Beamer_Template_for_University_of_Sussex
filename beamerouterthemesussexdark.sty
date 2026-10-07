@@ -1,0 +1,76 @@
+\mode<presentation>
+\setbeamercolor*{author in head/foot}{fg=uschalk,bg=usgreen}
+\setbeamercolor*{section in head/foot}{fg=uschalk,bg=usgreen}
+\setbeamercolor*{date in head/foot}{fg=uschalk,bg=usgreen}
+
+\setbeamertemplate{page number in head/foot}[totalframenumber]%
+
+% Logo shown at the right of the footline; redefine to use another file,
+% e.g. \renewcommand{\sussexfootlogo}{\includegraphics[height=1.6ex]{my-logo}}
+\providecommand{\beamer@sussex@footlogo}{true}
+\newcommand{\sussexfootlogo}{\includegraphics[height=2.2ex]{logos/sussex-logo-secondary-chalk.pdf}}
+
+\def\sussex@true{true}
+\newcommand{\sussex@footlogobox}{%
+    \ifx\beamer@sussex@footlogo\sussex@true
+        \begin{beamercolorbox}[wd=.12\paperwidth,ht=2.75ex,dp=1.25ex,right,rightskip=1.5ex]{author in head/foot}%
+            \raisebox{-0.55ex}{\sussexfootlogo}%
+        \end{beamercolorbox}%
+    \fi
+}
+\newcommand{\sussex@footwidth}{%
+    \ifx\beamer@sussex@footlogo\sussex@true .48\paperwidth\else .6\paperwidth\fi
+}
+
+\defbeamertemplate*{footline}{sectionfootline}
+{
+        \leavevmode%
+        \hbox{%
+        \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.75ex,dp=1.25ex,center]{author in head/foot}%
+            \usebeamerfont{author in head/foot}\insertshortauthor
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=\sussex@footwidth,ht=2.75ex,dp=1.25ex,center]{author in head/foot}%
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.75ex,dp=1.25ex,leftskip=2ex,rightskip=2ex,sep=0pt]{author in head/foot}%
+            \hfill%
+            \usebeamercolor[fg]{page number in head/foot}%
+            \usebeamerfont{page number in head/foot}%
+            \usebeamertemplate{page number in head/foot}%
+        \end{beamercolorbox}%
+        \sussex@footlogobox}%
+        \vskip0pt%
+}
+
+\defbeamertemplate*{footline}{infolines theme}
+{%
+    \ifnum \insertpagenumber=1
+        \leavevmode%
+        \hbox{%
+        \begin{beamercolorbox}[wd=\paperwidth,ht=2.75ex,dp=1.25ex,center]{}%
+        % empty environment to raise height
+        \end{beamercolorbox}}%
+        \vskip0pt%
+    \else
+        \leavevmode%
+        \hbox{%
+        \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.75ex,dp=1.25ex,center]{author in head/foot}%
+            \usebeamerfont{author in head/foot}\insertshortauthor
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=\sussex@footwidth,ht=2.75ex,dp=1.25ex,center]{section in head/foot}%
+            \usebeamerfont{section in head/foot}\insertsectionhead
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.75ex,dp=1.25ex,leftskip=2ex,rightskip=2ex,sep=0pt]{date in head/foot}%
+            \hfill%
+            \usebeamercolor[fg]{page number in head/foot}%
+            \usebeamerfont{page number in head/foot}%
+            \usebeamertemplate{page number in head/foot}%
+        \end{beamercolorbox}%
+        \sussex@footlogobox}%
+        \vskip0pt%
+    \fi
+}
+
+\setbeamersize{text margin left=1em,text margin right=1em}
+
+\mode
+<all>

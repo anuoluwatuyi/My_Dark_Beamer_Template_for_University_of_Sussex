@@ -1,0 +1,146 @@
+\documentclass[11pt,t,aspectratio=169]{beamer}
+\setbeamersize{text margin left=1em,text margin right=1em}
+\usetheme{sussexdark} % options: [footlogo=false] hides the footer logo
+\usepackage{hyperref}
+\usepackage{physics}
+\usepackage{multicol}
+\usepackage{listings}
+
+% code listings in Sussex colours
+\lstset{
+    basicstyle=\ttfamily,
+    keywordstyle=\color{usalbionblue}\bfseries,
+    commentstyle=\color{usditchlinggreen}\itshape,
+    stringstyle=\color{uspavilionpurple},
+    columns=fullflexible,
+    keepspaces=true,
+    showstringspaces=false,
+    aboveskip=2pt,
+    belowskip=0pt,
+}
+
+% Delete this, if you do not want the table of contents to pop up at the beginning of each subsection:
+\AtBeginSection[]
+{
+    \begingroup
+        \setbeamertemplate{background canvas}[vertical shading][bottom=usgreen,top=usgreen]
+        \setbeamertemplate{footline}[sectionfootline]
+        \setbeamertemplate{section page}[mysection]
+        \frame[c]{
+        \sectionpage
+        }
+    \endgroup
+}
+
+\title{16:9 Dark Beamer Template for the University of Sussex}
+\subtitle{Not an official University of Sussex template}
+\author{Debby Oluwatuyi}
+\institute{University of Sussex}
+\date{\today}
+
+%titlepage logo
+\titlegraphic{\includegraphics[height=0.95in]{logos/sussex-logo-chalk.pdf}}
+
+% colour swatch for the palette slide
+\newcommand{\swatch}[3]{%
+    \begin{minipage}[t]{0.118\textwidth}\centering
+        {\color{#1}\rule{\linewidth}{0.3cm}}\par\vspace{1pt}
+        {\tiny\sussexsemibold #2\par}
+        {\fontsize{4.5}{5}\selectfont\texttt{#1}\par \#{}#3\par}
+    \end{minipage}\hfill}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}[c]{Outline}
+    \tableofcontents
+\end{frame}
+
+\section{Disclaimer}
+\begin{frame}[c]
+\frametitle{Disclaimer}
+    \begin{multicols}{2}
+    \begin{itemize}
+        \item THIS IS NOT AN OFFICIAL UNIVERSITY OF SUSSEX TEMPLATE.
+        \item Adapted from the \LaTeX{} template by Guanyang Xue (itself modified from Alex Pacheco's).
+        \item Follows the University of Sussex Brand Guidelines V.1 (October 2025).
+        \item Modify if you have suggestions to improve it and pass on the modifications so that anyone interested in using \LaTeX{} for presentations could benefit.
+        \end{itemize}
+    \end{multicols}
+    \begin{itemize}
+        \item Typing equations with \emph{physics} package is always more convenient.
+        $$\pdv{\vb*{U}}{t}+(\vb*{U}\cdot\nabla)\vb*{U}-\nu\laplacian\vb*{U} =-\frac{1}{\rho }\grad p+\vb*{g}$$
+    \end{itemize}
+\end{frame}
+
+\section{How to}
+\begin{frame}[c,fragile]
+    \frametitle{How to use it}
+    \framesubtitle{How to install it to your path}
+    \begin{itemize}
+        \item Place the contents within your TEXINPUTS path. On Linux, modify the TEXINPUTS variable to point to the directory where these files exist.
+        \item For example: \lstinline[language=bash]|export TEXINPUTS=${HOME}/LaTeX//:${TEXINPUTS}|
+        \item On MacTeX, you need to install it to \lstinline|${HOME}/Library/texmf/tex/latex/sussexdark|
+        \item If you have admin permission copy it to your \TeX{} tree to the directory where the other beamer themes are located e.g. \lstinline|/usr/share/texmf-texlive/tex/latex/beamer/themes|
+        \item To use the theme, add the command \lstinline[language={[LaTeX]TeX}]|\usetheme{sussexdark}| to the preamble of your document.
+        \item Compile using pdflatex to get the pdf file.
+        \item Feel free to modify the theme to suit your needs.
+    \end{itemize}
+\end{frame}
+\subsection{Blocks}
+\begin{frame}[c,fragile]
+    \frametitle{How to use it}
+    \framesubtitle{How to use blocks}
+    \begin{block}{This is a block}
+\begin{lstlisting}[language={[LaTeX]TeX}]
+\usepackage{listings}
+...
+\begin{frame}[c,fragile] % Use fragile option
+\end{lstlisting}
+    \end{block}
+    \begin{exampleblock}{This is an example block}
+\begin{lstlisting}[language=Python]
+import numpy as np
+a = np.array([1, 2, 3])
+\end{lstlisting}
+    \end{exampleblock}
+    \begin{alertblock}{This is an alert block}
+\begin{lstlisting}[language=bash]
+fatal error: mpi.h: No such file or directory
+compilation terminated.
+\end{lstlisting}
+    \end{alertblock}
+\end{frame}
+
+\subsection{Colours}
+\begin{frame}[c]
+    \frametitle{Brand colours}
+    \framesubtitle{Use them as \texttt{\textbackslash color\{usgreen\}}; official tints exist as \texttt{usgreen80}, \texttt{uschalk40}, \ldots}
+    {\footnotesize\sussexsemibold Sussex by the Sea (primary)}\par\smallskip
+    \swatch{usgreen}{South Downs Green}{033803}
+    \swatch{uschalk}{Seven Sisters Chalk}{EAE5DD}
+    \swatch{usturquoise}{English Channel Turquoise}{32D8C5}
+    \hspace*{0.6\textwidth}\par\smallskip
+    {\footnotesize\sussexsemibold Brighton (secondary)}\par\smallskip
+    \swatch{usargusred}{Argus Red}{FF3323}
+    \swatch{usnorthlaineorange}{North Laine Orange}{FF9200}
+    \swatch{uscarouselyellow}{Carousel Yellow}{FEFE00}
+    \swatch{usrockpink}{Rock Pink}{FF00C5}
+    \swatch{uspavilionpurple}{Pavilion Purple}{CA21E8}
+    \swatch{usalbionblue}{Albion Blue}{0713CB}
+    \swatch{usbeachhutblue}{Beach Hut Blue}{00FFFF}
+    \swatch{usstanmergreen}{Stanmer Green}{0FED8D}\par\smallskip
+    {\footnotesize\sussexsemibold South Downs (secondary)}\par\smallskip
+    \swatch{usshellpeach}{Shell Peach}{F5C48A}
+    \swatch{usheatherpurple}{Heather Purple}{5B3046}
+    \swatch{usrampionlilac}{Rampion Lilac}{A193F2}
+    \swatch{usflintgrey}{Flint Grey}{6F7587}
+    \swatch{usoceanteal}{Ocean Teal}{003B4A}
+    \swatch{usadonisblue}{Adonis Blue}{3F77CA}
+    \swatch{usditchlinggreen}{Ditchling Green}{6B8400}
+    \swatch{usdownlandgreen}{Downland Green}{A7D936}
+\end{frame}
+\end{document}

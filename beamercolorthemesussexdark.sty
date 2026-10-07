@@ -1,0 +1,90 @@
+\mode<presentation>
+
+% Following the University of Sussex Brand Guidelines V.1 (October 2025)
+% Colours and official tints copied from section 4.3 of the guidelines.
+% Text/background pairs below meet WCAG AAA, as the guidelines require.
+
+% Sussex by the Sea (primary palette)
+\definecolor{usgreen}{HTML}{033803} % South Downs Green, FOREGROUND
+\definecolor{usgreen80}{HTML}{356035} % South Downs Green 80%
+\definecolor{usgreen60}{HTML}{688868} % South Downs Green 60%
+\definecolor{usgreen40}{HTML}{9AAF9A} % South Downs Green 40%
+\definecolor{usgreen20}{HTML}{CDD7CD} % South Downs Green 20%
+\definecolor{uschalk}{HTML}{EAE5DD} % Seven Sisters Chalk, BACKGROUND
+\definecolor{uschalk80}{HTML}{EEEAE4} % Seven Sisters Chalk 80%
+\definecolor{uschalk60}{HTML}{F2EFEC} % Seven Sisters Chalk 60%
+\definecolor{uschalk40}{HTML}{F7F5F1} % Seven Sisters Chalk 40%
+\definecolor{uschalk20}{HTML}{FBFAF8} % Seven Sisters Chalk 20%
+\definecolor{usturquoise}{HTML}{32D8C5} % English Channel Turquoise
+\definecolor{usturquoise80}{HTML}{5BE0D1} % English Channel Turquoise 80%
+\definecolor{usturquoise60}{HTML}{84E8DC} % English Channel Turquoise 60%
+\definecolor{usturquoise40}{HTML}{ADEFE8} % English Channel Turquoise 40%
+\definecolor{usturquoise20}{HTML}{D6F7F3} % English Channel Turquoise 20%
+
+% Brighton (secondary palette, vibrant)
+\definecolor{usargusred}{HTML}{FF3323} % Argus Red
+\definecolor{usnorthlaineorange}{HTML}{FF9200} % North Laine Orange
+\definecolor{uscarouselyellow}{HTML}{FEFE00} % Carousel Yellow
+\definecolor{usrockpink}{HTML}{FF00C5} % Rock Pink
+\definecolor{uspavilionpurple}{HTML}{CA21E8} % Pavilion Purple
+\definecolor{usalbionblue}{HTML}{0713CB} % Albion Blue
+\definecolor{usbeachhutblue}{HTML}{00FFFF} % Beach Hut Blue
+\definecolor{usstanmergreen}{HTML}{0FED8D} % Stanmer Green
+
+% South Downs (secondary palette, subtle)
+\definecolor{usshellpeach}{HTML}{F5C48A} % Shell Peach
+\definecolor{usheatherpurple}{HTML}{5B3046} % Heather Purple
+\definecolor{usheatherpurple20}{HTML}{DED6DA} % Heather Purple 20%
+\definecolor{usrampionlilac}{HTML}{A193F2} % Rampion Lilac
+\definecolor{usflintgrey}{HTML}{6F7587} % Flint Grey
+\definecolor{usoceanteal}{HTML}{003B4A} % Ocean Teal
+\definecolor{usoceanteal20}{HTML}{CCD8DB} % Ocean Teal 20%
+\definecolor{usadonisblue}{HTML}{3F77CA} % Adonis Blue
+\definecolor{usditchlinggreen}{HTML}{6B8400} % Ditchling Green
+\definecolor{usdownlandgreen}{HTML}{A7D936} % Downland Green
+
+% use those colors
+\setbeamercolor{titlelike}{fg=uschalk,bg=usgreen}
+\setbeamercolor{title}{fg=uschalk}
+\setbeamercolor{subtitle}{fg=uschalk}
+\setbeamercolor{frametitle}{fg=uschalk,bg=usgreen}
+\setbeamercolor{framesubtitle}{fg=uschalk}
+\setbeamercolor{author}{fg=uschalk}
+\setbeamercolor{institute}{fg=uschalk}
+\setbeamercolor{date}{fg=uschalk}
+\setbeamercolor{section title}{fg=uschalk}
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{alerted text}{fg=usheatherpurple}
+\setbeamercolor{example text}{fg=usoceanteal}
+\setbeamercolor{structure}{fg=usgreen}
+\setbeamercolor{item}{fg=usgreen} % color of bullets
+\setbeamercolor{subitem}{fg=usgreen}
+\setbeamercolor{subsubitem}{fg=usgreen}
+\setbeamercolor{itemize/enumerate subbody}{fg=usgreen}
+\setbeamerfont{itemize/enumerate subbody}{size=\footnotesize}
+\setbeamerfont{itemize/enumerate subitem}{size=\footnotesize}
+\setbeamercolor{footline}{bg=usgreen}
+\setbeamercolor{section in toc}{fg=usgreen}
+\setbeamercolor{subsection in toc}{fg=usgreen}
+\setbeamertemplate{section in toc}[square]
+\setbeamertemplate{subsection in toc}[square]
+\setbeamercolor*{palette primary}{fg=usgreen,bg=uschalk}
+\setbeamercolor*{palette secondary}{fg=usgreen,bg=uschalk} % footer
+\setbeamercolor*{palette tertiary}{fg=usgreen,bg=uschalk} % footer
+
+\setbeamertemplate{itemize subitem}{{\textendash}}
+\setbeamertemplate{blocks}[rounded][shadow=\beamer@themerounded@shadow]
+
+\setbeamertemplate{title page}[default][colsep=-4bp,rounded=true,shadow=\beamer@themerounded@shadow]
+\setbeamertemplate{part page}[default][colsep=-4bp,rounded=true,shadow=\beamer@themerounded@shadow]
+
+\setbeamercolor{block title}{use=structure,fg=uschalk,bg=usgreen}
+\setbeamercolor{block title alerted}{use=alerted text,fg=uschalk,bg=usheatherpurple}
+\setbeamercolor{block title example}{use=example text,fg=uschalk,bg=usoceanteal}
+
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=usgreen20}
+\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=usheatherpurple20}
+\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=usoceanteal20}
+
+\mode
+<all>
